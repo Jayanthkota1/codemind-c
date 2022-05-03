@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int t,a[300],i,c=0,j;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<t;i++)
+    {
+        c=0;
+        for(j=1;j<a[i];j++)
+        {
+            if(a[i]==j*j)
+            {
+                c=1;
+            }
+        }
+        if(c==1)
+        {
+            printf("True
+");
+        }
+        else
+        {
+            printf("False
+");
+        }
+    }
+}
