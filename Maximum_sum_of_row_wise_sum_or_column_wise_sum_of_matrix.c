@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int f=0,max1,r,p,a[20][20],b,i,j,max=0;
+    int r,p,a[20][20],b,i,j,max=0;
     scanf("%d%d",&r,&p);
     for(i=0;i<r;i++)
     {
@@ -22,25 +22,18 @@ int main()
             max=b;
         }
     }
-    for(j=0;j<p;j++)
+    for(i=0;i<p;i++)
     {
-       f=0;
-        for(i=0;i<r;i++)
+       b=0;
+        for(j=0;j<r;j++)
         {
-           f=f+a[i][j];
+           b=b+a[j][i];
         }
-        if(max1<f)
+        if(max<b)
         {
-            max1=f;
+            max=b;
         }
     }
-    if(max1>max)
-    {
-        printf("%d",max1);
-    }
-    else
-    {
-        printf("%d",max);
-    }
+    printf("%d",max);
     
 }
