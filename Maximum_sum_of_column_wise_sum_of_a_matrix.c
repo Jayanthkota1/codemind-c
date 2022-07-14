@@ -10,12 +10,12 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
-    for(j=0;j<p;j++)
+    for(i=0;i<p;i++)
     {
        b=0;
-        for(i=0;i<r;i++)
+        for(j=0;j<r;j++)
         {
-           b=b+a[i][j];
+           b=b+a[j][i];
         }
         if(max<b)
         {
