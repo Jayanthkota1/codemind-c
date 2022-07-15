@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[300],i,k,c=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    k=1;
+    while(k<n+2)
+    {
+    c=0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==k)
+        {
+          c=1;
+          break;
+        }
+    }
+    if(c==0)
+    {
+        printf("%d",k);
+        break;
+    }
+    k++;
+    }
+}
